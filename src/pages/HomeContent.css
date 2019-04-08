@@ -45,6 +45,26 @@
   font-family: "museo-slab",serif;
   overflow-y: hidden; 
   overflow-x: hidden; 
-  margin-top: -50px;
+  margin-top: -20px;
   text-align: left;
 }
+
+.bg-button {
+  width: 100%;
+  min-width: 300px;  
+  max-width: 250px;
+  margin-left: -990px 
+ }
+
+ .bg-text {
+  color:black;
+  margin-left: 28px;
+  font-size: 2.6vw;
+  line-height: 1.08365;
+  font-weight: 600;
+  letter-spacing: -.003em;
+  font-family: 'Abel', sans-serif;
+  overflow-y: hidden; 
+  overflow-x: hidden; 
+  margin-top: -150px;
+} 

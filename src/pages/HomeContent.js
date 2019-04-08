@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './HomeContent.css';
 import videoSrc from '../../src/video/Cardw-test.mp4';
+import { Button } from 'reactstrap';
+
 class HomeContent extends Component {
     constructor(props) {
 
@@ -24,6 +26,8 @@ class HomeContent extends Component {
                 />
                 <p className="body-text">Find Relief Now</p>
                 <p className="paraghraph-2">with our fantastic team</p>
+                <Button style={{ border: '2px solid #fff' }} className="bg-button" onClick={this.toggle}><span className="bg-button-text ">Schedule Now</span></Button>
+
               </div>
         );
     }
