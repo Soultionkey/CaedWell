@@ -5,6 +5,8 @@ import App from './App';
 import { BrowserRouter } from 'react-router-dom';
 import * as serviceWorker from './serviceWorker';
 import 'bootstrap/dist/css/bootstrap.css';
+import '../node_modules/react-modal-video/scss/modal-video.scss';
+
 ReactDOM.render(
     <BrowserRouter>
         <App />
