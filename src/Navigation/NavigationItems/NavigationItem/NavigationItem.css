@@ -3,8 +3,8 @@
     box-sizing: border-box;
     display: block;
     width: 100%;
-    font-size: 18px;
-    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    font-family: 'Slabo 27px', serif;
 }
 
 .NavigationItem a {

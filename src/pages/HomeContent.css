@@ -1,4 +1,28 @@
 
+#bg-body {
+  background-image: url('../img/PalstartHeroImage.jpg');
+  width: 100%;
+  height: 520px; 
+  background-size: 100% 620px;
+  background-repeat: no-repeat;
+  position: relative;  
+  -webkit-align-items: center;
+  display: flex;
+  align-items: center;
+  margin-top: -1px;
+}
+.hrSeperator {
+  margin-top: 20px;
+  margin-bottom: 50px;
+  border: 0;
+  height: 1px;
+  background: #333;
+  width: 100%;
+  background-image: -webkit-linear-gradient(left, #ccc, #333, #ccc);
+  background-image: -moz-linear-gradient(left, #ccc, #333, #ccc);
+  background-image: -ms-linear-gradient(left, #ccc, #333, #ccc);
+  background-image: -o-linear-gradient(left, #ccc, #333, #ccc);
+}
 .bg-text {
   color:white;
   font-size: 4.4vw;
@@ -8,21 +32,49 @@
   font-family: 'Open Sans', sans-serif;
   overflow-y: hidden; 
   overflow-x: hidden; 
-  margin-top: -700px;
+  margin-top: -200px;
   text-align: left;
-  margin-left: -90px;
+  margin-left: 10px;
   position:absolute;
-  z-index:1;
 } 
+.main-about-text {
+  color:black;
+  font-size: 2.4vw;
+  line-height: 1.1;
+  font-weight: 540;
+  letter-spacing: -.003em;
+  font-family: 'Slabo 27px', serif;
+  text-align: center;
+}
 .about-text {
   color:black;
   font-size: 1.4vw;
-  line-height: 1.08365;
-  font-weight: 600;
+  line-height: 1.1;
+  font-weight: 540;
   letter-spacing: -.003em;
-  font-family: 'Open Sans', sans-serif;
-  overflow-y: hidden; 
-  overflow-x: hidden; 
+  font-family: 'Slabo 27px', serif;
+  text-align: center;
+}
+.project-text {
+  color:black;
+  font-size: 22px;
+  line-height: 1.1;
+  font-weight: 530;
+  letter-spacing: 0em;
+  font-family: "SF Pro Display","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
+  text-align: left;
+ 
+}
+.project2-text {
+  color:black;
+  font-size: 22px;
+  line-height: 1.1;
+  font-weight: 530;
+  letter-spacing: 0em;
+  font-family: "SF Pro Display","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
+  text-align: right;
+  
+ 
 }
 #container {
   overflow: hidden;
@@ -41,10 +93,7 @@ video {
   height: auto;
   
 }
-#bg-body {
-  background-color: #fff;
-  height: 730px;
-}
+
 #video-background {
   /*  making the video fullscreen  */
     right: 0; 
@@ -78,11 +127,11 @@ video {
   overflow: hidden;
   padding: 0;
   width: 100%;
-  height: 1740px;
+  height: 1200px;
   }
 .home-section {
   background-color: #fff;
-  height: 800px;
+  height: 1050px;
   margin: 2.08333%;
   
   }
@@ -193,20 +242,14 @@ video {
   height: 350px;
   }
 
-/* 
-  #video-viewport { position: absolute; top: 0; left: 0; width: 100%; height: 100%; overflow: hidden; z-index: -1; }
-  video { display: block; width: 100%; height: auto; }
-  
-  .fullsize-video-bg { height: 100%; overflow: hidden; }
-  
-  .fullsize-video-bg:before { content: ""; background: rgba(114,45,0,.35); position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; }
-  .fullsize-video-bg:after { content: ""; background: url("../video/palstartHeader.mp4");
-     background-size: 3px 3px; position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; }
-  
-  
-  .fullsize-video-bg .inner { display: table; width: 100%; max-width: 24em; height: 100%; margin: 0 auto; padding: 0; position: relative; z-index: 2; text-shadow: 0 1px 5px rgba(0,0,0,.5); }
-  .fullsize-video-bg .inner > div { text-align: center; display: table-cell; vertical-align: middle; padding: 0 2em; }
-  
-  
-  h1 { font-family: "Raleway", sans-serif; font-size: 3em; line-height: .9; font-weight: 900; letter-spacing: -.025em; text-transform: uppercase; margin-bottom: .5em; }
-  h1 + p { font-family: "Shadows Into Light Two", cursive; font-size: 1.5em;  } */
+  .footer{
+    position: relative;
+    margin-top: -60px;
+    height: 60px;
+    line-height: 60px;
+    background-color: white;
+    z-index: 1;
+    text-align: center;
+    font-family: 'Slabo 27px', serif;
+    font-weight: 500;
+}

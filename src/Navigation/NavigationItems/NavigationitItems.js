@@ -1,8 +1,8 @@
 import React from 'react';
 import './NavigationItems.css';
 import NavigationItem from './NavigationItem/NavigationItem';
-import { Link } from 'react-router-dom'
-
+import { HashRouter } from 'react-router-dom'
+import { HashLink as Link } from 'react-router-hash-link';
 class navigationItems extends React.Component {
     state = {
         open: false
@@ -15,14 +15,18 @@ class navigationItems extends React.Component {
         event.preventDefault();
         this.setState({ open: false});
     }
+    goToAbout = (event) => {
+        event.preventDefault();
+        window.scrollTo(0, this.scroll);
+    };
     render() {
         const { open } = this.state;
 
         return (
             <ul className="NavigationItems" >
-                <NavigationItem link="/projects" exact click={this.hideMenu} >Projects</NavigationItem>
-                <NavigationItem link="/about" click={this.hideMenu} >About</NavigationItem>
-                <NavigationItem link="/prices" click={this.hideMenu} >Blog</NavigationItem>
+                <NavigationItem link="/projects" exact>Projects</NavigationItem>
+                <NavigationItem link="/home#about_section" onClick={this.goToAbout}>About</NavigationItem>
+                <NavigationItem link="/prices" >Blog</NavigationItem>
             </ul>
         );
     }

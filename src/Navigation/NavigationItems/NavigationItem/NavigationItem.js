@@ -1,6 +1,7 @@
 import React from 'react';
 import {NavLink} from 'react-router-dom';
 import './NavigationItem.css';
+import { HashLink as Link } from 'react-router-hash-link';
 
 const navigationItem = ( props ) => (
     <li className="NavigationItem">
