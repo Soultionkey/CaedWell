@@ -25,8 +25,10 @@ class navigationItems extends React.Component {
         return (
             <ul className="NavigationItems" >
                 <NavigationItem link="/projects" exact>Projects</NavigationItem>
-                <NavigationItem link="/home#about_section" onClick={this.goToAbout}>About</NavigationItem>
-                <NavigationItem link="/prices" >Blog</NavigationItem>
+                <NavigationItem link="/#about_section" onClick={this.goToAbout}>About</NavigationItem>
+                <NavigationItem link="/blog" >Blog</NavigationItem>
+                <NavigationItem link="/#contact_section" >Contact</NavigationItem>
+
             </ul>
         );
     }

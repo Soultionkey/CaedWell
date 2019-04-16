@@ -37,7 +37,7 @@
   margin-left: 10px;
   position:absolute;
 } 
-.main-about-text {
+.column-text {
   color:black;
   font-size: 2.4vw;
   line-height: 1.1;
@@ -63,7 +63,6 @@
   letter-spacing: 0em;
   font-family: "SF Pro Display","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
   text-align: left;
- 
 }
 .project2-text {
   color:black;
@@ -127,15 +126,20 @@ video {
   overflow: hidden;
   padding: 0;
   width: 100%;
-  height: 1200px;
+  height: 1950px;
   }
-.home-section {
+.about-section {
   background-color: #fff;
   height: 1050px;
   margin: 2.08333%;
   
   }
-
+  .contactUs-section {
+    background-color: #fff;
+    height: 700px;
+    margin: 2.08333%;
+    
+    }
 
 .round-services-text {
   font-size: 1.8vw;
@@ -241,7 +245,24 @@ video {
   border-radius: 50%;
   height: 350px;
   }
-
+  .map{
+    
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 25px;
+    height: 0;
+    margin-left: 160px
+  }
+ 
+  .contact-info {
+  color: #333;
+  font-size: 1.4vw;
+  line-height: 1.1;
+  font-weight: 540;
+  letter-spacing: -.003em;
+  font-family: 'Slabo 27px', serif;
+  text-align: left;
+  }
   .footer{
     position: relative;
     margin-top: -60px;

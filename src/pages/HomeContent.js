@@ -2,12 +2,14 @@ import React, { Component } from 'react';
 import './HomeContent.css';
 import ved from '../video/palstartHeader.mp4';
 import ReactDOM from 'react-dom';
-
+import { Map, InfoWindow, Marker, GoogleApiWrapper } from 'google-maps-react';
 class HomeContent extends Component {
     constructor(props) {
         super(props);
         this.state = {
-
+            showingInfoWindow: false,
+            activeMarker: {},
+            selectedPlace: {},
         }
     }
     componentDidUpdate() {
@@ -19,7 +21,26 @@ class HomeContent extends Component {
             }
         }
     }
+    onMarkerClick = (props, marker, e) =>
+        this.setState({
+            selectedPlace: props,
+            activeMarker: marker,
+            showingInfoWindow: true
+        });
+
+    onMapClicked = (props) => {
+        if (this.state.showingInfoWindow) {
+            this.setState({
+                showingInfoWindow: false,
+                activeMarker: null
+            })
+        }
+    };
     render() {
+        const style = {
+            width: '80%',
+            height: '50%'
+        }
         return (
             <div >
                 <div id="bg-body" >
@@ -30,22 +51,13 @@ class HomeContent extends Component {
                      `}</pre>
                     </div>
                 </div>
-                {/* <div id="bg-body">
-                    <video loop autoplay=''id="video-background" muted  plays-inline>
-                        <source src={ved} type="video/mp4" />
-                        
-                    </video>
-                    <pre className="bg-text" >{`
-                      Computer Science Education 
-                                  In Palestine
-                     `}</pre>
-                </div> */}
+                
                 <div className="home-serperator">
-                <div id="#about_section" ref='about_section'></div>
-                    <div className="home-section">
+                    <div id="#about_section" ref='about_section'></div>
+                    <div className="about-section">
                         <div className="rowHome">
                             <div className="home-column">
-                                <h1 className="main-about-text "> About Us<br /><br /></h1>
+                                <h1 className="column-text"> About Us<br /><br /></h1>
                                 <p className="about-text" >
                                     Palstart is a Palestinian nonprofit organization with the aim of providing high quality computer science education at no cost for qualified students.
                                   The mission of Palstart is to connect young Palestinians with the modern job market and we believe that computer science  education is the most valuable component in achieving our goal.<br /><br /></p>
@@ -57,7 +69,47 @@ class HomeContent extends Component {
                                 </video>
                             </div>
                         </div>
+
                     </div>
+                    <div id="#contact_section" ref='contact_section'></div>
+                    <div className="contactUs-section ">
+                        <div className="rowHome">
+                            <div className="home-column">
+                                <h1 className="column-text"> Contact Us<br /><br /></h1>
+                                <p className="contact-info">
+                                    Rafidya Building <br />
+                                    Rafidya Street.<br />
+                                    Nablus, Palestine<br />
+                                    Email: info@palstart.net <br />
+                                </p>
+                                <p className="hrSeperator"></p>
+
+                                <div className="map">
+                                    <Map
+                                        google={this.props.google}
+                                        style={style}
+                                        initialCenter={{
+                                            lat: 32.221613,
+                                            lng: 35.239127
+                                        }}
+                                        zoom={14}>
+
+                                        <Marker onClick={this.onMarkerClick}
+                                            name={'PAlstart'} />
+
+                                        <InfoWindow onClose={this.onInfoWindowClose}
+                                            marker={this.state.activeMarker}
+                                            visible={this.state.showingInfoWindow}>
+                                            <div>
+                                                <h1>{this.state.selectedPlace.name}</h1>
+                                            </div>
+                                        </InfoWindow>
+                                    </Map>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
                 <div >
                     <footer className="footer">
@@ -69,4 +121,6 @@ class HomeContent extends Component {
     }
 }
 
-export default HomeContent;
+export default GoogleApiWrapper({
+    apiKey: ("AIzaSyDiOuUKJThbd0c-A2YErkQVircERST41Ns")
+})(HomeContent)
