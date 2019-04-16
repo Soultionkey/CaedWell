@@ -95,7 +95,7 @@ class HomeContent extends Component {
                                         zoom={14}>
 
                                         <Marker onClick={this.onMarkerClick}
-                                            name={'PAlstart'} />
+                                            name={'Palstart'} />
 
                                         <InfoWindow onClose={this.onInfoWindowClose}
                                             marker={this.state.activeMarker}
