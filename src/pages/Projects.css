@@ -5,6 +5,14 @@
     width: 100%;
     height: 3150px;
 }
+
+.desktopMargin {
+    margin-left: 378px;
+}
+.img-pro{
+    height: 220px;
+    border-radius: 50%;
+}
 .section {
     height: 50px;
     margin-top: 10px;
@@ -23,28 +31,58 @@
     letter-spacing: 0em;
     font-family: 'Slabo 27px', serif;
     text-align: left;
-    padding: 40px
+    padding: 40px;
+    
+}
+.project-info {
+    font-size: 3.2vh;
+    
 }
 .project-img1 {
     float: right;
-    width: 30%;
+    width: 25%;
     height:220px;
     margin-left: 15px;
+    margin-top: -60px
   }
+ 
 .project-img2 {
     float: left;
-    width: 30%;
+    width: 25%;
     height:220px;
     margin-left: 15px;
-    padding-right: 20px
+    padding-right: 20px;
+    margin-top: -60px
 }
+
 @media screen and (max-width: 800px) {
     .section {
         height: 50px;
         margin-top: 30px;
     }
     .project-main-section {
-        margin-top: 20px
+        margin-top: 20px;
+        height: 565px;
+    }
+    .project-img1{
+        float: none;
+        display: inline;
+    }
+    .project-img2{
+        float: none;
+        display: inline;
+        
+    }
+  
+    .bg-page {
+        height: 5480px;
+    }
+    .project-info {
+        font-size: 2.4vh;
+       display: block;
+    }
+    .desktopMargin {
+        margin-left: 0px;
     }
 }
 .footer{

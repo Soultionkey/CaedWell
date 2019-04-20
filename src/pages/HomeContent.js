@@ -15,12 +15,13 @@ class HomeContent extends Component {
     componentDidUpdate() {
         let hash = this.props.location.hash.replace('#', '');
         if (hash) {
-            let node = ReactDOM.findDOMNode(this.refs[hash]);
+            let node = ReactDOM.findDOMNode(this.refs[hash])
             if (node) {
                 node.scrollIntoView();
             }
         }
     }
+     
     onMarkerClick = (props, marker, e) =>
         this.setState({
             selectedPlace: props,
@@ -39,17 +40,19 @@ class HomeContent extends Component {
     render() {
         const style = {
             width: '80%',
-            height: '50%'
+            height: '400px',
+            marginLeft:'25px'
         }
         return (
-            <div >
-                <div id="bg-body" >
-                    <div>
+            <div className="body" >
+                <div className="bg-body" >
+=                    <div>
                         <pre className="bg-text" >{`
                       Computer Science Education 
-                                        Palestine
+                                       Palestine
                      `}</pre>
                     </div>
+                    
                 </div>
                 
                 <div className="home-serperator">
@@ -62,30 +65,28 @@ class HomeContent extends Component {
                                     Palstart is a Palestinian nonprofit organization with the aim of providing high quality computer science education at no cost for qualified students.
                                   The mission of Palstart is to connect young Palestinians with the modern job market and we believe that computer science  education is the most valuable component in achieving our goal.<br /><br /></p>
                                 <p className="hrSeperator"></p>
-                            </div>
-                            <div className="home-column" >
-                                <video loop autoplay='' id="video-background" muted plays-inline>
+                                <video loop autoplay id="video-background" muted plays-inline>
                                     <source src={ved} type="video/mp4" />
                                 </video>
                             </div>
                         </div>
+                        <div id="#contact_section" ref='contact_section'></div>
 
                     </div>
-                    <div id="#contact_section" ref='contact_section'></div>
                     <div className="contactUs-section ">
                         <div className="rowHome">
-                            <div className="home-column">
+                           <div className="home-column">
                                 <h1 className="column-text"> Contact Us<br /><br /></h1>
                                 <p className="contact-info">
                                     Rafidya Building <br />
                                     Rafidya Street.<br />
                                     Nablus, Palestine<br />
-                                    Email: info@palstart.net <br />
+                                    Email: info@palstart.net <br /><br /><br />
                                 </p>
                                 <p className="hrSeperator"></p>
-
-                                <div className="map">
-                                    <Map
+                                
+                                 
+                                     <Map
                                         google={this.props.google}
                                         style={style}
                                         initialCenter={{
@@ -105,8 +106,8 @@ class HomeContent extends Component {
                                             </div>
                                         </InfoWindow>
                                     </Map>
-                                </div>
-                            </div>
+                            </div> 
+                            
                         </div>
                     </div>
 
@@ -122,5 +123,5 @@ class HomeContent extends Component {
 }
 
 export default GoogleApiWrapper({
-    apiKey: ("AIzaSyDiOuUKJThbd0c-A2YErkQVircERST41Ns")
+    apiKey: ("AIzaSyDm41cZKiz5gJpgL90amLfCVvvUS5DWgFI")
 })(HomeContent)
